@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vvv
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -20,9 +20,9 @@ requirements:
     - hatch-fancy-pypi-readme
     - hatch-vcs
     - pip
-    - python >=3.8
+    - python >=3.10
   run:
-    - python >=3.8
+    - python >=3.10
     - pyyaml
     - repo-review
 
@@ -32,15 +32,22 @@ test:
     - sp_repo_review.checks
     - sp_repo_review.families
   source_files:
+    - docs
     - tests
+    - README.md
+    - LICENSE
+    - noxfile.py
+    - pyproject.toml
+    - .github
+    - .pre-commit-config.yaml
+    - .readthedocs.yaml
   requires:
     - pip
-    - pipx  # [linux]
     - pytest
   commands:
     - pip check
     - pytest
-    - pipx run 'sp-repo-review[cli]' --help  # [linux]
+    - sp-repo-review --help
 
 about:
   home: https://github.com/scientific-python/cookie
