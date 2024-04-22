@@ -25,6 +25,7 @@ requirements:
     - python >=3.10
     - pyyaml
     - repo-review
+    - rich-click
 
 test:
   imports:
@@ -47,7 +48,7 @@ test:
   commands:
     - pip check
     - pytest
-    - sp-repo-review --help
+    - repo-review --help
 
 about:
   home: https://github.com/scientific-python/cookie
