@@ -48,7 +48,7 @@ test:
   commands:
     - pip check
     - pytest
-    - repo-review --help
+    - repo-review --list-all
 
 about:
   home: https://github.com/scientific-python/cookie
