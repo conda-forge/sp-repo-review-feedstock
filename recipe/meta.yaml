@@ -1,5 +1,5 @@
 {% set name = "sp-repo-review" %}
-{% set version = "2024.03.10" %}
+{% set version = "2024.04.23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/scientific-python/cookie/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 093825653e7b581de1189dab36b93b321ac93ba63a95490d4bcb33efc105f773
+  sha256: 60c4512701cc468914183f9313cf432a8199c5be4ad5d48b703d7652c8fd4907
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vvv
-  number: 2
+  number: 0
 
 requirements:
   host:
