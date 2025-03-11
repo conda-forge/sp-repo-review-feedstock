@@ -13,16 +13,15 @@ Documentation: https://learn.scientific-python.org/development
 
 A copier/cookiecutter template for new Python projects based on the Scientific Python Developer Guide.
 What makes this different from other templates for Python packages?
-  Lives with the Scientific-Python Development Guide: Every decision is clearly documented and every tool described, and everything is kept in sync.
-  Eleven different backends to choose from for building packages.
-  Optional VCS versioning for most backends.
-  Template generation tested in GitHub Actions using nox.
-  Supports generation with copier, cookiecutter, and cruft.
-  Supports GitHub Actions if targeting a github.com url (the default), and adds experimental GitLab CI support otherwise.
-  Includes several compiled backends using pybind11, with wheels produced for all platforms using cibuildwheel.
-  Provides sp-repo-review to evaluate existing repos against the guidelines, with a WebAssembly version integrated with the guide. All checks cross-linked.
-  Follows PyPA best practices and regularly updated.
-
+Lives with the Scientific-Python Development Guide: Every decision is clearly documented and every tool described, and everything is kept in sync.
+Eleven different backends to choose from for building packages.
+Optional VCS versioning for most backends.
+Template generation tested in GitHub Actions using nox.
+Supports generation with copier, cookiecutter, and cruft.
+Supports GitHub Actions if targeting a github.com url (the default), and adds experimental GitLab CI support otherwise.
+Includes several compiled backends using pybind11, with wheels produced for all platforms using cibuildwheel.
+Provides sp-repo-review to evaluate existing repos against the guidelines, with a WebAssembly version integrated with the guide. All checks cross-linked.
+Follows PyPA best practices and regularly updated.
 
 Current build status
 ====================
