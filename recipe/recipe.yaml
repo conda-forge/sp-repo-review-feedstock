@@ -17,6 +17,12 @@ build:
   number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vvv
+  python:
+    entry_points:
+      - sp-repo-review = repo_review.__main__:main
+      - sp-ruff-checks = sp_repo_review.ruff_checks.__main__:main
+
+
 
 requirements:
   host:
@@ -58,6 +64,8 @@ tests:
     script:
       - pytest
       - repo-review --list-all
+      - sp-repo-review --list-all
+      - sp-ruff-checks
 
 about:
   summary: A copier/cookiecutter template for new Python projects based on the Scientific Python Developer Guide
