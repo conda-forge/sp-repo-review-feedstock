@@ -3,7 +3,7 @@ schema_version: 1
 context:
   python_min: '3.10'
   name: sp-repo-review
-  version: "2025.10.20"
+  version: "2025.11.07"
 
 package:
   name: ${{ name|lower }}
@@ -11,12 +11,18 @@ package:
 
 source:
   url: https://github.com/scientific-python/cookie/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 6a72a9d2d6266165ae7a62ca67b646d93729dd808412317a9e2e1b99eddef5b6
+  sha256: 40c75b259860cfb51b036a3b3ff4fea1dbf1403cd6ded9846acffab6b3263320
 
 build:
   number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vvv
+  python:
+    entry_points:
+      - sp-repo-review = repo_review.__main__:main
+      - sp-ruff-checks = sp_repo_review.ruff_checks.__main__:main
+
+
 
 requirements:
   host:
@@ -58,6 +64,8 @@ tests:
     script:
       - pytest
       - repo-review --list-all
+      - sp-repo-review --list-all
+      - sp-ruff-checks
 
 about:
   summary: A copier/cookiecutter template for new Python projects based on the Scientific Python Developer Guide
