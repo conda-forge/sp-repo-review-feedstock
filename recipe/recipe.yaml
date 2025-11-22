@@ -3,7 +3,7 @@ schema_version: 1
 context:
   python_min: '3.10'
   name: sp-repo-review
-  version: "2025.11.10"
+  version: "2025.11.21"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/scientific-python/cookie/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 03ab9b033f378fa04cb57c73f6494900bd6f474291912b5b2efa8018bb1710e8
+  sha256: dec669ebd6a2601ac804ec626d2c1fdd3efdf0245eba07fd332f532f26b9feeb
 
 build:
   number: 0
