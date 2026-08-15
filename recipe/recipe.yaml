@@ -56,6 +56,7 @@ tests:
         - noxfile.py
         - pyproject.toml
         - .github/
+        - .gitignore
         - .pre-commit-config.yaml
         - .readthedocs.yaml
     requirements:
